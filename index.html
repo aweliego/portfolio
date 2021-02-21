@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./css/css/all.css" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png/"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <a
+        href="#navbar"
+        id="main-menu-toggle"
+        class="menu-toggle"
+        aria-label="Open main menu"
+      >
+        <span class="sr-only">Open main menu</span>
+        <span class="fa fa-bars" aria-hidden="true"></span>
+      </a>
+
+      <nav id="navbar" class="navbar" aria-label="Main menu">
+        <a
+          href="#main-menu-close"
+          id="main-menu-close"
+          class="menu-close"
+          aria-label="Close main menu"
+        >
+          <span class="sr-only">Close main menu</span>
+          <span class="fas fa-times" aria-hidden="true"></span>
+        </a>
+
+        <ul>
+          <li><a href="#welcome">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+        </ul>
+      </nav>
+      <a
+        href="#main-menu-toggle"
+        class="backdrop"
+        tabindex="-1"
+        aria-hidden="true"
+        hidden
+      ></a>
+    </header>
+
+    <!-- Welcome section -->
+    <section id="welcome">
+      <img
+        src="pics/profile/profile.png"
+        alt="Photo of Amélie"
+        id="profile-img"
+      />
+      <div class="intro">
+        <h1>Hey I'm Amélie</h1>
+        <span>& I create websites.</span>
+      </div>
+      <div class="contact-info">
+        <div class="icons-grid">
+          <a
+            href="https://www.linkedin.com/in/am%C3%A9lie-gorry-6b664662/"
+            target="_blank"
+            ><i class="fab fa-linkedin contact-icon"></i
+          ></a>
+          <a href="https://github.com/aweliego" target="_blank"
+            ><i class="fab fa-github contact-icon"></i
+          ></a>
+          <a href="https://www.freecodecamp.org/awelie_go" target="_blank"
+            ><i class="fab fa-free-code-camp contact-icon"></i>
+          </a>
+        </div>
+        <p><i class="fas fa-map-marker-alt location-icon"></i>Amsterdam</p>
+      </div>
+    </section>
+    <!-- Projects section -->
+    <section id="projects">
+      <h2>Some of my projects<i class="fas fa-code-branch"></i></h2>
+      <div class="flip-card-container">
+        <!-- Survey form -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/survey-form.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Survey form</h3>
+              <p>One of the web design projects of freeCodeCamp</p>
+              <p>#html-forms #parallax-scrolling-effect #media-queries</p>
+              <a href="https://aweliego.github.io/survey-form" target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Product landing page -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/product-landing-page.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Product landing page</h3>
+              <p>One of the web design projects of freeCodeCamp</p>
+              <p>#flexbox #media-queries</p>
+              <a
+                href="https://aweliego.github.io/product-landing-page"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Documentation page -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/technical-doc.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Technical Documentation page</h3>
+              <p>One of the web design projects of freeCodeCamp</p>
+              <p>#css-grids #media-queries</p>
+              <a
+                href="https://aweliego.github.io/technical-documentation-page"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap site -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/bootstrap.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Bootstrap site</h3>
+              <p>A simple website to explore Bootstrap features</p>
+              <p>#bootstrap4</p>
+              <a
+                href="https://amsterdam-off-the-beaten-track.netlify.app/"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Balloon game -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/balloon-game.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Balloon popping game</h3>
+              <p>
+                The project I built during a coding introduction workshop (so
+                not great on mobile I'm afraid!)
+              </p>
+              <p>
+                It was fun to figure this one out though, so it gets a spot for
+                now!
+              </p>
+              <a
+                href="https://balloon-popping-game.netlify.app/"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company landing page -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/company-landing-page.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Company landing page</h3>
+              <p>One of my first attempts at making a responsive website</p>
+              <p>#flexbox #media-queries</p>
+              <a
+                href="https://eventful-landing-page.netlify.app/"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Chore door game -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="pics/projects/chore-door.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Javascript game</h3>
+              <p>
+                A Codecademy project which made me explore the power of
+                Javascript events!
+              </p>
+              <p>#javascript-game #dom-events</p>
+              <a href="https://chore-door-js.netlify.app/" target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- JS projects -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="/pics/projects/js-projects.png"
+                alt="Preview project"
+                class="project-img"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h3>Javascript programs</h3>
+              <p>
+                I've also completed many other JS 'open requirements' projects,
+                whose code is available on my GitHub!
+              </p>
+              <a
+                href="https://github.com/aweliego?tab=repositories&q=&type=&language=javascript"
+                target="_blank"
+                >Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End of project cards -->
+      </div>
+    </section>
+
+    <section id="journey">
+      <h2>How the journey began... and continues</h2>
+      <ul>
+        <li>
+          In October 2019, I attended a coding workshop at
+          <a href="https://codaisseur.com/" target="_blank">Codaisseur</a> where
+          I got my first taste of programming by building an online game (the
+          one you can find in my projects).
+        </li>
+        <li>
+          It's in January 2020 that I officially started my journey to learn
+          code and enrolled in the
+          <span class="skills">Web Development</span> path of
+          <a href="https://www.codecademy.com/" target="_blank">Codecademy</a>.
+        </li>
+        <li>
+          Via this online course, supplemented with many other resources, I've
+          studied
+          <span class="skills">HTML</span>, <span class="skills">CSS</span> and
+          <span class="skills">Javascript</span> inside and out (and I still
+          am).
+        </li>
+        <li>
+          Aside from those languages, I also learned how to use
+          <span class="skills">Git</span> and the
+          <span class="skills"></span> command line.
+        </li>
+        <li>
+          Other technologies I want to study further are
+          <span class="skills">Bootstrap</span>,
+          <span class="skills">Sass</span> and
+          <span class="skills">Android development</span>.
+        </li>
+        <li>
+          In 2021, I'm brushing up the skills I've acquired so far, with
+          <a href="https://www.freecodecamp.org/learn" target="_blank"
+            >FreeCodeCamp</a
+          >.
+        </li>
+        <li>
+          My goal this year is to become well-versed in
+          <span class="skills">Javascript</span> and incorporate more
+          interactivity in my websites!
+        </li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates <i class="fas fa-graduation-cap"></i></h2>
+      <div class="certificates-grid">
+        <a
+          href="https://www.udemy.com/certificate/UC-DP8V0Y40/"
+          target="_blank"
+          class="certificate-card"
+        >
+          <img
+            src="pics/certificates/udemy.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/css.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/sass.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/bootstrap.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/javascript.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/command-line.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#" target="_blank" class="certificate-card">
+          <img
+            src="pics/certificates/git.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+        <a
+          href="https://www.freecodecamp.org/certification/awelie_go/responsive-web-design"
+          target="_blank"
+          class="certificate-card"
+        >
+          <img
+            src="pics/certificates/web-design.png"
+            alt="certificate"
+            class="certificate-img"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>© Amélie Gorry 2021</p>
+    </footer>
+  </body>
+</html>
