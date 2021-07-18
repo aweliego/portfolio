@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
 
+:root {
+  --dark-bg: rgb(53, 47, 47);
+  --pink-color: #ff147f;
+  --fuchsia-color: #ff145f;
+  --orange-color: #ffc42d;
+  --white-color: whitesmoke;
+  --dark-blue-color: midnightblue;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +32,7 @@ header {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  background: rgb(53, 47, 47);
+  background: var(--dark-bg);
   z-index: 1; /* Important for navbar to keep overlapping absolute-positioned project cards */
 }
 
@@ -45,14 +54,14 @@ header {
   padding: 0.75em 15px;
   line-height: 1em;
   font-size: 1.3em;
-  color: whitesmoke;
+  color: var(--white-color);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  color: #ff147f;
+  color: var(--pink-color);
   transform: rotate(360deg);
 }
 
@@ -92,14 +101,14 @@ Offscreen menu style */
   padding: 0.75em 15px;
   line-height: 1em;
   font-size: 1em;
-  color: whitesmoke;
+  color: var(--white-color);
   text-decoration: none;
-  border-bottom: 1px solid #ff147f;
+  border-bottom: 1px solid var(--pink-color);
   transition: background-color 0.5s ease, padding-left 0.5s ease;
 }
 
 .navbar li:first-child a {
-  border-top: 1px solid #ff147f;
+  border-top: 1px solid var(--pink-color);
 }
 
 @media (max-width: 767px) {
@@ -185,6 +194,7 @@ Horizontal menu
   /* Undo positioning of off-canvas menu */
   .navbar {
     position: relative;
+    /* position: fixed; */
     right: auto;
     top: auto;
     height: auto;
@@ -215,7 +225,7 @@ Horizontal menu
   .navbar a {
     border: 0 !important; /* Remove borders from off-canvas styling */
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--white-color);
     font-weight: 300;
     position: relative;
     transition: color 0.3s ease;
@@ -225,7 +235,7 @@ Horizontal menu
   .navbar a:focus {
     background: none; /* Remove background from off-canvas styling */
     top: 3px;
-    color: #ff147f;
+    color: var(--pink-color);
   }
 }
 
@@ -236,7 +246,7 @@ Horizontal menu
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  background: linear-gradient(45deg, #ff145f, #ffc42d);
+  background: linear-gradient(45deg, var(--fuchsia-color), var(--orange-color));
   text-align: center;
 }
 
@@ -249,8 +259,8 @@ Horizontal menu
   animation-name: enhance;
   animation-duration: 2s;
   animation-timing-function: ease-in;
-  -webkit-box-shadow: 8px 6px 8px -4px #000000;
-  box-shadow: 8px 6px 8px -4px #000000;
+  -webkit-box-shadow: 8px 6px 8px -4px #000;
+  box-shadow: 8px 6px 8px -4px #000;
 }
 
 @keyframes enhance {
@@ -304,7 +314,7 @@ Horizontal menu
 .contact-icon,
 .location-icon {
   padding: 15px 15px 8px 15px;
-  color: black;
+  color: #000;
   transition: all 0.3s ease;
 }
 
@@ -315,7 +325,7 @@ Horizontal menu
 
 /* Projects section Styles */
 #projects {
-  background-color: rgb(53, 47, 47);
+  background-color: var(--dark-bg);
   width: 100%;
   padding: 70px 20px 60px 20px;
 }
@@ -325,7 +335,7 @@ Horizontal menu
   padding-bottom: 40px;
   width: 80%;
   margin: 0 auto;
-  color: whitesmoke;
+  color: var(--white-color);
   font-size: 32px;
   text-shadow: 5px 2px 4px rgba(46, 106, 28, 0.86);
 }
@@ -386,7 +396,7 @@ Horizontal menu
   align-items: center;
   flex-direction: column;
   line-height: 1.7;
-  color: whitesmoke;
+  color: var(--white-color);
   cursor: default;
   padding: 20px;
 }
@@ -406,9 +416,9 @@ Horizontal menu
   padding: 10px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
-  background-color: midnightblue;
+  background-color: var(--dark-blue-color);
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--white-color);
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease, border 0.3s ease;
@@ -427,7 +437,11 @@ Horizontal menu
 
 /* Journey section Styles */
 #journey {
-  background: linear-gradient(222deg, #ff145f, #ffc42d);
+  background: linear-gradient(
+    222deg,
+    var(--fuchsia-color),
+    var(--orange-color)
+  );
   line-height: 1.8;
   color: rgb(15, 5, 5);
   padding: 70px 0 30px 0;
@@ -472,8 +486,8 @@ Horizontal menu
 #journey li::selection,
 #journey a::selection,
 #journey span::selection {
-  background-color: midnightblue;
-  color: whitesmoke;
+  background-color: var(dark-blue-color);
+  color: var(--white-color);
 }
 
 .skills {
@@ -490,7 +504,7 @@ Horizontal menu
 
 /* Certificates Section Styles */
 #certificates {
-  background-color: rgb(53, 47, 47);
+  background-color: var(--dark-bg);
   width: 100%;
   padding: 70px 20px 40px 20px;
 }
@@ -498,7 +512,7 @@ Horizontal menu
 #certificates h2 {
   text-align: center;
   padding-bottom: 20px;
-  color: white;
+  color: #fff;
   font-size: 32px;
   text-shadow: 5px 2px 4px rgba(46, 106, 28, 0.86);
 }
@@ -530,9 +544,9 @@ Horizontal menu
 /* Footer Styles */
 #footer {
   padding: 20px 0 20px 0;
-  background-color: rgb(53, 47, 47);
+  background-color: var(--dark-bg);
   font-size: 20px;
-  color: whitesmoke;
+  color: var(--white-color);
   text-align: center;
-  border-top: solid 2px #ff147f;
+  border-top: solid 2px var(--pink-color);
 }
