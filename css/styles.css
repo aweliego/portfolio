@@ -193,8 +193,7 @@ Horizontal menu
 
   /* Undo positioning of off-canvas menu */
   .navbar {
-    position: relative;
-    /* position: fixed; */
+    position: fixed;
     right: auto;
     top: auto;
     height: auto;
@@ -203,6 +202,8 @@ Horizontal menu
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
   }
 
   .navbar ul {
@@ -225,8 +226,8 @@ Horizontal menu
   .navbar a {
     border: 0 !important; /* Remove borders from off-canvas styling */
     text-decoration: none;
-    color: var(--white-color);
-    font-weight: 300;
+    color: var(--dark-bg);
+    font-weight: 400;
     position: relative;
     transition: color 0.3s ease;
   }
@@ -236,6 +237,17 @@ Horizontal menu
     background: none; /* Remove background from off-canvas styling */
     top: 3px;
     color: var(--pink-color);
+  }
+
+  .navbar.active {
+    background: var(--dark-bg);
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .navbar.active a {
+    color: var(--white-color);
+    font-weight: 300;
   }
 }
 
