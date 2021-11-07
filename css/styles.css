@@ -423,7 +423,7 @@ Horizontal menu
   opacity: 0.6;
 }
 
-.flip-card-back a {
+.flip-card-back .btn {
   margin-top: 20px;
   padding: 10px 15px;
   border: 1px solid transparent;
@@ -436,7 +436,7 @@ Horizontal menu
   transition: background-color 0.3s ease, border 0.3s ease;
 }
 
-.flip-card-back a:hover {
+.flip-card-back .btn:hover {
   background-color: rgb(50, 50, 189);
   border: 1px solid greenyellow;
 }
