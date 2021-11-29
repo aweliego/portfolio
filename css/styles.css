@@ -447,6 +447,30 @@ Horizontal menu
   object-fit: cover;
 }
 
+.animated-bg {
+  height: 330px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #333 0%,
+    var(--pink-color) 10%,
+    #333 15%,
+    #333 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
+
 /* Journey section Styles */
 #journey {
   background: linear-gradient(
