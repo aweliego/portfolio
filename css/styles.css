@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
 :root {
   --dark-bg: rgb(53, 47, 47);
@@ -23,7 +23,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -198,12 +198,10 @@ Horizontal menu
     top: auto;
     height: auto;
     overflow: visible;
-    /* transform: translate(0); */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 14px;
-    transition: all 0.3s ease-in-out;
+    font-weight: 700;
   }
 
   .navbar ul {
@@ -226,9 +224,11 @@ Horizontal menu
   .navbar a {
     border: 0 !important; /* Remove borders from off-canvas styling */
     text-decoration: none;
-    color: var(--dark-bg);
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: lowercase;
     position: relative;
+    color: rgba(0, 0, 0, 0.562);
     transition: color 0.3s ease;
   }
 
@@ -236,18 +236,19 @@ Horizontal menu
   .navbar a:focus {
     background: none; /* Remove background from off-canvas styling */
     top: 3px;
-    color: var(--pink-color);
+    color: #000;
   }
 
   .navbar.active {
     background: var(--dark-bg);
     height: 50px;
-    font-size: 16px;
   }
 
   .navbar.active a {
     color: var(--white-color);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 17px;
+    transition: font-size 0.3s ease-in-out;
   }
 }
 
@@ -368,6 +369,7 @@ Horizontal menu
 
 .flip-card {
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -380,6 +382,7 @@ Horizontal menu
 @media (min-width: 768px) {
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    cursor: default;
   }
 }
 
@@ -452,10 +455,10 @@ Horizontal menu
   width: 100%;
   background-image: linear-gradient(
     to right,
-    #333 0%,
-    var(--pink-color) 10%,
-    #333 15%,
-    #333 100%
+    #2e6a1c 0%,
+    #3b8625 10%,
+    #2e6a1c 15%,
+    #2e6a1c 100%
   );
   background-size: 200% 100%;
   animation: bgPos 1s linear infinite;

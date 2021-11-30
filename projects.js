@@ -26,7 +26,7 @@ const projects = [
     title: 'Bootstrap site',
     imgSrc: 'pics/projects/bootstrap.png',
     description: 'A simple website to explore Bootstrap features',
-    tags: '#bootstrap4<',
+    tags: '#bootstrap4',
     link: 'https://amsterdam-off-the-beaten-track.netlify.app/',
   },
   {
