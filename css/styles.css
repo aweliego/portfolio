@@ -502,7 +502,7 @@ Horizontal menu
   text-shadow: 5px 2px 4px rgba(223, 211, 222, 0.68);
 }
 
-#bio ul {
+#bio .content {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
@@ -514,7 +514,7 @@ Horizontal menu
   border-radius: 5px;
 }
 
-#bio li {
+#bio p {
   padding: 10px;
 }
 
@@ -524,24 +524,8 @@ Horizontal menu
   font-weight: 600;
 }
 
-#bio a:hover {
-  text-decoration: underline;
-}
-
-#bio li::selection,
-#bio a::selection,
-#bio span::selection {
-  background-color: var(dark-blue-color);
-  color: var(--white-color);
-}
-
-.skills {
-  color: rgb(71, 17, 109);
-  font-weight: 600;
-}
-
 @media (min-width: 768px) {
-  #bio ul {
+  .content {
     width: 60%;
     font-size: 18px;
   }
