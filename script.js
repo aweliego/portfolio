@@ -1,11 +1,19 @@
 import { projects } from './projects.js';
 
 const nav = document.getElementById('navbar');
-const scrollElement = document.getElementById('projects');
-const scrollOffset = 100;
+
+const projectSection = document.getElementById('projects');
+const bioSection = document.getElementById('bio');
 
 window.addEventListener('scroll', fixNav);
-window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('scroll', fadeInBio);
+// window.addEventListener('scroll', () => {
+//   createProjectCard(projects);
+// });
+
+createProjectCard(projects);
+
+
 
 // Sticky navbar on scroll
 function fixNav() {
@@ -14,24 +22,14 @@ function fixNav() {
     : nav.classList.remove('active');
 }
 
-// Create projects cards on scroll
-function elementInView(el, offset = 0) {
-  const elementTop = el.getBoundingClientRect().top;
-
-  return (
-    elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) - offset
-  );
-}
-
-function handleScrollAnimation() {
-  if (elementInView(scrollElement, scrollOffset)) {
-    createProjectCard(projects);
-  }
-}
-
 // Import projects dynamically and create flipcards
 function createProjectCard(projects) {
+  const triggerBottom = (window.innerHeight / 7) * 4; // the higher the number we divide the window.height by, the lower we need to scroll to see the animation
+  const projectSectionTop = projectSection.getBoundingClientRect().top;
+  const bioSectionTop = bioSection.getBoundingClientRect().top;
+
+  //if (projectSectionTop < triggerBottom && bioSectionTop > triggerBottom) {
+  //console.log('touched triggerBottom');
   projects.forEach((project) => {
     const { title, imgSrc, description, tags, link } = project;
 
@@ -39,6 +37,7 @@ function createProjectCard(projects) {
     const flipCardContainer = document.querySelector('.flip-card-container');
     const flipCard = document.createElement('div');
     flipCard.classList.add('flip-card', 'animated-bg');
+
     flipCardContainer.append(flipCard);
 
     // Create innerFlipCards
@@ -54,27 +53,39 @@ function createProjectCard(projects) {
     // Show cards content after 1.5s
     setTimeout(() => {
       innerFlipCard.innerHTML = `<div class="flip-card-front">
-          <img
-            src="${imgSrc}"
-            alt="Preview project"
-            class="project-img"
-          />
-        </div>
-        <div class="flip-card-back">
-          <h3>${title}</h3>
-          <p>${description}</p>
-          <p>${tags}</p>
-          <a
-            href="${link}"
-            target="_blank"
-            class="btn"
-            >Check it out
-          </a>
-        </div>`;
+            <img
+              src="${imgSrc}"
+              alt="Preview project"
+              class="project-img"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h3>${title}</h3>
+            <p>${description}</p>
+            <p>${tags}</p>
+            <a
+              href="${link}"
+              target="_blank"
+              class="btn"
+              >Check it out
+            </a>
+          </div>`;
 
       flipCard.classList.remove('animated-bg');
     }, 1500);
 
     flipCard.append(innerFlipCard);
   });
+  //}
+}
+
+// Fade in bio text on scroll
+function fadeInBio() {
+  const bioContent = document.querySelector('.content');
+  const triggerBottom = (window.innerHeight / 5) * 4;
+  const bioSectionTop = bioSection.getBoundingClientRect().top;
+
+  if (bioSectionTop < triggerBottom) {
+    bioContent.style.opacity = '1';
+  }
 }

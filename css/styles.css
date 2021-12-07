@@ -512,16 +512,16 @@ Horizontal menu
   list-style: none;
   background-color: rgba(151, 187, 150, 0.377);
   border-radius: 5px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+#bio .content .fadeIn {
+  opacity: 1;
 }
 
 #bio p {
   padding: 10px;
-}
-
-#bio a {
-  text-decoration: none;
-  color: rgb(92, 25, 8);
-  font-weight: 600;
 }
 
 @media (min-width: 768px) {
