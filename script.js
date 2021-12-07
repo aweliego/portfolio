@@ -1,9 +1,11 @@
 import { projects } from './projects.js';
+import { certificates } from './certificates.js';
 
 const nav = document.getElementById('navbar');
 
 const projectSection = document.getElementById('projects');
 const bioSection = document.getElementById('bio');
+const certificatesSection = document.getElementById('certificates');
 
 window.addEventListener('scroll', fixNav);
 window.addEventListener('scroll', fadeInBio);
@@ -12,8 +14,7 @@ window.addEventListener('scroll', fadeInBio);
 // });
 
 createProjectCard(projects);
-
-
+importCertificates(certificates);
 
 // Sticky navbar on scroll
 function fixNav() {
@@ -88,4 +89,30 @@ function fadeInBio() {
   if (bioSectionTop < triggerBottom) {
     bioContent.style.opacity = '1';
   }
+}
+
+// Import certificates dynamically
+function importCertificates(certificates) {
+  const certificateGrid = document.createElement('div');
+  certificateGrid.classList.add('certificates-grid');
+
+  certificates.forEach((certificate) => {
+    const { link, imgSrc } = certificate;
+
+    const certificateEl = document.createElement('div');
+    certificateGrid.append(certificateEl);
+    certificatesSection.append(certificateGrid);
+
+    certificateEl.innerHTML = `<a
+    href="${link}"
+    target="_blank"
+    class="certificate-card"
+  >
+    <img
+      src="${imgSrc}"
+      alt="certificate"
+      class="certificate-img"
+    />
+  </a>`;
+  });
 }
