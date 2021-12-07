@@ -252,8 +252,8 @@ Horizontal menu
   }
 }
 
-/* Welcome section Styles */
-#welcome {
+/* Home section Styles */
+#home {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -319,7 +319,8 @@ Horizontal menu
   line-height: 1;
 }
 
-.icons-grid {
+.icons-grid,
+.languages-grid {
   display: flex;
   justify-content: center;
 }
@@ -334,6 +335,11 @@ Horizontal menu
 .contact-icon:hover {
   transform: scale(1.2);
   color: rgb(61, 56, 56);
+}
+
+.languages-grid i {
+  padding: 30px 15px 8px 15px;
+  font-size: 50px;
 }
 
 /* Projects section Styles */
@@ -474,8 +480,8 @@ Horizontal menu
   }
 }
 
-/* Journey section Styles */
-#journey {
+/* Bio section Styles */
+#bio {
   background: linear-gradient(
     222deg,
     var(--fuchsia-color),
@@ -486,7 +492,7 @@ Horizontal menu
   padding: 70px 0 30px 0;
 }
 
-#journey h2 {
+#bio h2 {
   font-weight: bold;
   text-align: center;
   padding-bottom: 40px;
@@ -496,7 +502,7 @@ Horizontal menu
   text-shadow: 5px 2px 4px rgba(223, 211, 222, 0.68);
 }
 
-#journey ul {
+#bio ul {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
@@ -508,23 +514,23 @@ Horizontal menu
   border-radius: 5px;
 }
 
-#journey li {
+#bio li {
   padding: 10px;
 }
 
-#journey a {
+#bio a {
   text-decoration: none;
   color: rgb(92, 25, 8);
   font-weight: 600;
 }
 
-#journey a:hover {
+#bio a:hover {
   text-decoration: underline;
 }
 
-#journey li::selection,
-#journey a::selection,
-#journey span::selection {
+#bio li::selection,
+#bio a::selection,
+#bio span::selection {
   background-color: var(dark-blue-color);
   color: var(--white-color);
 }
@@ -535,7 +541,7 @@ Horizontal menu
 }
 
 @media (min-width: 768px) {
-  #journey ul {
+  #bio ul {
     width: 60%;
     font-size: 18px;
   }
