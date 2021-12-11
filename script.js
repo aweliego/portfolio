@@ -7,12 +7,20 @@ const projectSection = document.getElementById('projects');
 const bioSection = document.getElementById('bio');
 const certificatesSection = document.getElementById('certificates');
 
+const textIntro = document.querySelector('.intro h1');
+//console.log(textIntro.innerText)
+const text = "hey I'm Amélie";
+
+let idx = 1;
+let speed = 250;
+
 window.addEventListener('scroll', fixNav);
 window.addEventListener('scroll', fadeInBio);
 // window.addEventListener('scroll', () => {
 //   createProjectCard(projects);
 // });
 
+typeOutText();
 createProjectCard(projects);
 importCertificates(certificates);
 
@@ -21,6 +29,19 @@ function fixNav() {
   window.scrollY > nav.offsetHeight + 50
     ? nav.classList.add('active')
     : nav.classList.remove('active');
+}
+
+// Auto text effect
+function typeOutText() {
+  textIntro.innerText = text.slice(0, idx);
+  idx++;
+
+  setTimeout(typeOutText, speed);
+
+  // when if statement is commented out, the text will not restart, but the function keeps on being repeated
+  // if (idx > text.length) {
+  //   idx = 1;
+  // }
 }
 
 // Import projects dynamically and create flipcards

@@ -302,7 +302,7 @@ Horizontal menu
   animation-name: scale;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1.5s;
+  animation-delay: 3.5s;
 }
 
 @keyframes scale {
