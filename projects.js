@@ -69,6 +69,14 @@ const projects = [
     link: 'https://notes-app-makeover.netlify.app/',
   },
   {
+    title: 'Recipe app',
+    imgSrc: '/pics/projects/recipe-app.png',
+    description:
+      'I\'ve also completed many other JS "open requirements" projects, whose code is available on my GitHub!',
+    tags: '#api #dom-manipulation',
+    link: 'https://recipe-loader.netlify.app/',
+  },
+  {
     title: 'Javascript programs',
     imgSrc: '/pics/projects/js-projects.png',
     description:
