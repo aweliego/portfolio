@@ -69,11 +69,11 @@ const projects = [
     link: 'https://notes-app-makeover.netlify.app/',
   },
   {
-    title: 'Recipe app',
+    title: 'Recipe generator',
     imgSrc: '/pics/projects/recipe-app.png',
     description:
-      'I\'ve also completed many other JS "open requirements" projects, whose code is available on my GitHub!',
-    tags: '#api #dom-manipulation',
+      'A dynamic recipe app that uses the <a href="https://spoonacular.com/food-api">spoonacular food API</a> - a work still in progress to add the possibility to save a recipe!',
+    tags: '#javascript #api #dom-manipulation',
     link: 'https://recipe-loader.netlify.app/',
   },
   {

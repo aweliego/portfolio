@@ -433,6 +433,11 @@ Horizontal menu
   opacity: 0.6;
 }
 
+.flip-card-back p a {
+  text-decoration: none;
+  color: rgb(50, 50, 189);
+}
+
 .flip-card-back .btn {
   margin-top: 20px;
   padding: 10px 15px;
