@@ -77,6 +77,14 @@ const projects = [
     link: 'https://recipe-loader.netlify.app/',
   },
   {
+    title: 'Secret Santa',
+    imgSrc: '/pics/projects/secret-santa.png',
+    description:
+      'The main objective was to write the algorithm, the UI was for the fun! (Pch, the typing out effect you see is from <a href="https://github.com/bradtraversy">@bradtraversy</a>)',
+    tags: '#javascript #dom-events',
+    link: 'https://secret-santa-app.netlify.app/',
+  },
+  {
     title: 'Javascript programs',
     imgSrc: '/pics/projects/js-projects.png',
     description:
