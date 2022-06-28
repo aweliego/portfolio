@@ -1,6 +1,9 @@
 import { projects } from './projects.js';
 import { certificates } from './certificates.js';
 
+const year = document.getElementById('year');
+year.innerHTML = new Date().getFullYear();
+
 window.addEventListener('scroll', fixNav);
 window.addEventListener('scroll', fadeInBio);
 
@@ -19,7 +22,7 @@ function fixNav() {
   window.scrollY > nav.offsetHeight + 50
     ? nav.classList.add('active')
     : nav.classList.remove('active');
-};
+}
 
 // Auto text effect
 function typeOutText() {
