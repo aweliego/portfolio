@@ -2,7 +2,7 @@ export { projects };
 
 const projects = [
   {
-    title: 'survey-form',
+    title: 'Survey form',
     imgSrc: 'pics/projects/survey-form.png',
     description: 'One of the web design projects of freeCodeCamp',
     tags: '#html-forms #parallax-scrolling-effect #media-queries',
@@ -16,7 +16,7 @@ const projects = [
     link: 'https://aweliego.github.io/product-landing-page',
   },
   {
-    title: 'Technical Documentation page',
+    title: 'Technical documentation page',
     imgSrc: 'pics/projects/technical-doc.png',
     description: 'One of the web design projects of freeCodeCamp',
     tags: '#css-grids #media-queries',
@@ -28,14 +28,6 @@ const projects = [
     description: 'A simple website to explore Bootstrap features',
     tags: '#bootstrap4',
     link: 'https://amsterdam-off-the-beaten-track.netlify.app/',
-  },
-  {
-    title: 'Balloon popping game',
-    imgSrc: 'pics/projects/balloon-game.png',
-    description:
-      "The project I built during a coding introduction workshop (so not great on mobile I'm afraid!). It was fun to figure this one out though, so it gets a spot for now!",
-    tags: '',
-    link: 'https://balloon-popping-game.netlify.app/',
   },
   {
     title: 'Company landing page',
@@ -85,11 +77,11 @@ const projects = [
     link: 'https://secret-santa-app.netlify.app/',
   },
   {
-    title: 'Javascript programs',
-    imgSrc: '/pics/projects/js-projects.png',
+    title: 'Film finder',
+    imgSrc: '/pics/projects/film-finder.png',
     description:
-      'I\'ve also completed many other JS "open requirements" projects, whose code is available on my GitHub!',
-    tags: '',
-    link: 'https://github.com/aweliego?tab=repositories&q=&type=&language=javascript',
+      'A Codecademy project to which I added a bunch of features and improved the styles - mostly playing with the Movie Database API and local storage',
+    tags: '#javascript #api #responsiveness #localstorage',
+    link: 'https://film-finder-app.netlify.app/',
   },
 ];

@@ -530,6 +530,11 @@ Horizontal menu
   padding: 10px;
 }
 
+#bio a {
+  text-decoration: none;
+  color: rgb(87, 81, 81);
+}
+
 @media (min-width: 768px) {
   .content {
     width: 60%;
