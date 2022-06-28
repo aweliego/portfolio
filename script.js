@@ -1,24 +1,13 @@
 import { projects } from './projects.js';
 import { certificates } from './certificates.js';
 
-const nav = document.getElementById('navbar');
-
-const projectSection = document.getElementById('projects');
-const bioSection = document.getElementById('bio');
-const certificatesSection = document.getElementById('certificates');
-
-const textIntro = document.querySelector('.intro h1');
-//console.log(textIntro.innerText)
-const text = "hey I'm Amélie";
-
-let idx = 1;
-let speed = 250;
-
 window.addEventListener('scroll', fixNav);
 window.addEventListener('scroll', fadeInBio);
-// window.addEventListener('scroll', () => {
-//   createProjectCard(projects);
-// });
+
+const textIntro = document.querySelector('.intro h1');
+const text = "hey I'm Amélie";
+let idx = 1;
+let speed = 250;
 
 typeOutText();
 createProjectCard(projects);
@@ -26,32 +15,21 @@ importCertificates(certificates);
 
 // Sticky navbar on scroll
 function fixNav() {
+  const nav = document.getElementById('navbar');
   window.scrollY > nav.offsetHeight + 50
     ? nav.classList.add('active')
     : nav.classList.remove('active');
-}
+};
 
 // Auto text effect
 function typeOutText() {
   textIntro.innerText = text.slice(0, idx);
   idx++;
-
   setTimeout(typeOutText, speed);
-
-  // when if statement is commented out, the text will not restart, but the function keeps on being repeated
-  // if (idx > text.length) {
-  //   idx = 1;
-  // }
 }
 
 // Import projects dynamically and create flipcards
 function createProjectCard(projects) {
-  const triggerBottom = (window.innerHeight / 7) * 4; // the higher the number we divide the window.height by, the lower we need to scroll to see the animation
-  const projectSectionTop = projectSection.getBoundingClientRect().top;
-  const bioSectionTop = bioSection.getBoundingClientRect().top;
-
-  //if (projectSectionTop < triggerBottom && bioSectionTop > triggerBottom) {
-  //console.log('touched triggerBottom');
   projects.forEach((project) => {
     const { title, imgSrc, description, tags, link } = project;
 
@@ -103,6 +81,7 @@ function createProjectCard(projects) {
 
 // Fade in bio text on scroll
 function fadeInBio() {
+  const bioSection = document.getElementById('bio');
   const bioContent = document.querySelector('.content');
   const triggerBottom = (window.innerHeight / 5) * 4;
   const bioSectionTop = bioSection.getBoundingClientRect().top;
@@ -114,6 +93,7 @@ function fadeInBio() {
 
 // Import certificates dynamically
 function importCertificates(certificates) {
+  const certificatesSection = document.getElementById('certificates');
   const certificateGrid = document.createElement('div');
   certificateGrid.classList.add('certificates-grid');
 
