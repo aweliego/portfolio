@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: 'Time tracking dashboard',
-    imgSrc: '/pics/projects/dashboard.png',
+    imgSrc: '/pics/projects/time-tracking-dashboard.png',
     description:
       '<a href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw">Frontend Mentor challenge #2</a>: the challenge here lied in the responsive layout and rendering the data dynamically',
     tags: '#react #css-grid #semantic-markup',
@@ -42,14 +42,6 @@ const projects = [
     link: 'https://interactive-rating-tool.netlify.app/',
   },
   {
-    title: 'Film finder',
-    imgSrc: '/pics/projects/film-finder.png',
-    description:
-      'A Codecademy project to which I added a bunch of features and improved the styles - mostly playing with the Movie Database API and local storage',
-    tags: '#javascript #api #responsiveness #localstorage',
-    link: 'https://film-finder-app.netlify.app/',
-  },
-  {
     title: 'Secret Santa',
     imgSrc: '/pics/projects/secret-santa.png',
     description:
@@ -57,6 +49,14 @@ const projects = [
     tags: '#javascript #dom-events',
     link: 'https://secret-santa-app.netlify.app/',
   },
+  // {
+  //   title: 'Film finder',
+  //   imgSrc: '/pics/projects/film-finder.png',
+  //   description:
+  //     'A Codecademy project to which I added a bunch of features and improved the styles - mostly playing with the Movie Database API and local storage',
+  //   tags: '#javascript #api #responsiveness #localstorage',
+  //   link: 'https://film-finder-app.netlify.app/',
+  // },
   //   {
   //     title: 'Javascript game',
   //     imgSrc: 'pics/projects/chore-door.png',
